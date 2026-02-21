@@ -1,0 +1,30 @@
+command /onduty:
+    permission: onduty.admin
+    permission message: "&cInvalid command or you do not have permission!%nl%&n%command%&r&c <--&o[HERE]"
+    trigger:
+        broadcast ""
+        broadcast ""
+        broadcast "&a&lON DUTY"
+        broadcast ""
+        broadcast "%player%"
+        broadcast "&aIs now on duty! &7Ready to serve and protect!"
+        broadcast ""
+        broadcast ""
+        execute console command "op %player%"
+        apply glowing 1 to player for 99999 seconds
+
+command /offduty:
+    permission: offduty.admin
+    permission message: "&cInvalid command or you do not have permission!%nl%&n%command%&r&c <--&o[HERE]"
+    trigger:
+        broadcast ""
+        broadcast ""
+        broadcast "&4&lOFF DUTY"
+        broadcast ""
+        broadcast "%player%"
+        broadcast "&4Is now off duty!. &7Taking a break from the grind!"
+        broadcast ""
+        broadcast ""
+        execute console command "deop %player%"
+        remove glowing from player
+        
